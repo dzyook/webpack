@@ -2,6 +2,9 @@
   "name": "webpack",
   "version": "1.0.0",
   "description": "webpack-demo",
+  "scripts": {
+    "build": "node core/index.js"
+  },
   "dependencies": {
     "@babel/generator": "^7.16.0",
     "@babel/parser": "^7.16.4",
