@@ -1,5 +1,5 @@
 # webpack简易流程实现
 
-## npm i
+## npm install
 
 ## npm run build
