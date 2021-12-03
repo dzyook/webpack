@@ -13,7 +13,7 @@ function webpack(options) {
 // 合并参数
 function _mergeOptions(options) {
   const shellOptions = process.argv.slice(2).reduce((option, argv) => {
-    // argv -> --mode=production
+    // 对命令行中参数进行读取 例如 --mode=production
     const [key, value] = argv.split('=');
     if (key && value) {
       const parseKey = key.slice(2);

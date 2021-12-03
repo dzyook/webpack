@@ -58,27 +58,27 @@ const fs = require('fs')
         })
         .join(',')}
     };
-    // The module cache
-    var __webpack_module_cache__ = {};
+    // webpack module缓存
+    var __webpack_module_cache__ = {}; 
 
     // The require function
     function __webpack_require__(moduleId) {
-      // Check if module is in cache
+      // 检查当前moduleId是否之前缓存过
       var cachedModule = __webpack_module_cache__[moduleId];
       if (cachedModule !== undefined) {
-        return cachedModule.exports;
+        return cachedModule.exports; // 缓存过则直接读取
       }
-      // Create a new module (and put it into the cache)
+      // 创建一个新的module并把它加入modules缓存
       var module = (__webpack_module_cache__[moduleId] = {
         // no module.id needed
         // no module.loaded needed
         exports: {},
       });
 
-      // Execute the module function
+      // 执行这个模块函数，实际上就是运行一次这个模块文件
       __webpack_modules__[moduleId](module, module.exports, __webpack_require__);
 
-      // Return the exports of the module
+      // 返回模块的导出
       return module.exports;
     }
 
